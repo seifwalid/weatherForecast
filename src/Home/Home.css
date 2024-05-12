@@ -1,0 +1,64 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: url("./../assets/sunset.jpg") no-repeat center center/cover;
+  color: #fff;
+  position: absolute;
+  z-index: -1;
+}
+
+.app .search {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 1rem;
+}
+.app p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Courier New", Courier, monospace;
+}
+.app input {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0);
+  color: #f8f8f8;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+.HomeContainer {
+  max-width: 50rem;
+  height: 50rem;
+  margin: auto;
+  padding: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .top {
+  width: 100%;
+}
+
+.app .description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}

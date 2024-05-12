@@ -1,0 +1,78 @@
+.auth {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: -1;
+  background: url("./../assets/sunset.jpg") no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 30rem;
+  padding: 2rem;
+  gap: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(3px);
+}
+
+.auth label {
+  font-size: 2rem;
+  margin: 0.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.auth input {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.auth h1 {
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.submit {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: #53537d;
+  color: #ffffff;
+}
+.google {
+  background-color: #ad1212;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.google:hover {
+  background-color: #780d0d;
+  color: #ffffff;
+}
+.buttonIcon {
+  font-size: 1.8rem;
+  margin-left: 0.5rem;
+}
