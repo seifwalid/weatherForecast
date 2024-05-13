@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { FaGooglePlusG } from "react-icons/fa6";
 import "./Auth.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,7 +20,15 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Login Data:", formData);
+    const user = {
+      uid: 1,
+      name: "ahmed senousy",
+      email: "ahmedsenousy@gmail.com",
+      age: 22,
+      gender: "male",
+    };
+    localStorage.setItem("user", JSON.stringify(user));
+    navigate("/profile");
   };
 
   return (

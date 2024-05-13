@@ -2,7 +2,9 @@ import { useState } from "react";
 import { FaGooglePlusG } from "react-icons/fa6";
 
 import "./Auth.css";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
+  const navigate = useNavigate();
   // Initialize state to store form values
   const [formData, setFormData] = useState({
     name: "",
@@ -25,6 +27,8 @@ const Register = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submit behavior
     console.log("Form Data:", formData); // Here you could also send the data to a server, etc.
+    localStorage.setItem("user", JSON.stringify(formData));
+    navigate("/profile");
     // Additional registration logic goes here (e.g., validation, API calls)
   };
 

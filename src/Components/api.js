@@ -1,4 +1,4 @@
-const axios = require('axios');
+// const axios = require('axios');
 
 export const geoApiOptions = {
   method: 'GET',
