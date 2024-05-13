@@ -36,7 +36,7 @@ const NavBar = () => {
             <NavLink to="/graph" className="nav-link" activeClassName="active">
               Values
             </NavLink>
-            <NavLink to="/page1" className="nav-link" activeClassName="active">
+            <NavLink to="/search" className="nav-link" activeClassName="active">
               page1
             </NavLink>{" "}
             <NavLink to="/page2" className="nav-link" activeClassName="active">

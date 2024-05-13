@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
@@ -7,7 +8,7 @@ import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
 import ResetPassword from "./Authentication/ResetPassword";
 import NotFound from "./Components/NotFound";
-
+import SearchPage from "./Components/SearchPage";
 import AirQualityChart from "./Components/AirQualityChart";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+          <Route path="/search" element={<SearchPage/>} />
           <Route path="/" element={<Home />} />
           <Route path="/graph" element={< AirQualityChart/>} />
           <Route path="/Login" element={<Login />} />
