@@ -26,10 +26,29 @@ const Register = () => {
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent the default form submit behavior
-    console.log("Form Data:", formData); // Here you could also send the data to a server, etc.
-    localStorage.setItem("user", JSON.stringify(formData));
+  console.log("Form Data:", formData); // Here you could also send the data to a server, etc.
+
+  // Send form data to API endpoint
+  fetch('http://localhost:5071/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Save response data in local storage
+    localStorage.setItem("user", JSON.stringify(data));
+    
+    // Navigate to the profile page
     navigate("/profile");
-    // Additional registration logic goes here (e.g., validation, API calls)
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    // Handle error scenarios, e.g., display an error message to the user
+  });
+
   };
 
   return (
