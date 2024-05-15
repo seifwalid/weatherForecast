@@ -13,6 +13,7 @@ import UserProfile from "./Pages/UserProfile2";
 
 import "./App.css";
 import EditUserForm from "./Pages/UpdateUser";
+import EditProfile from "./Components/EditProfile";
 
 function App() {
     useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
                 <Routes>
                     <Route path='/search' element={<SearchPage />} />
                     <Route path='/' element={<Home />} />
+                    <Route path='editprofile' element={<EditProfile />} />
                     <Route path='/graph' element={<AirQualityChart />} />
                     <Route path='/Login' element={<Login />} />
                     <Route path='/Register' element={<Register />} />

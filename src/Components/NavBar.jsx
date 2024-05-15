@@ -4,6 +4,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import { IoMdLogOut } from "react-icons/io";
 import logo from "./../assets/logo.png";
 import User from "./../assets/user.png";
+import edit from "./../assets/edit.png";
 import "./Nav.css";
 import {
     SignedIn,
@@ -35,36 +36,38 @@ const NavBar = () => {
                     <h1>CLIMATE MONITORING SERVICE</h1>
                 </Navbar.Brand>
                 <Navbar.Collapse className='nav-content'>
-                    <Nav className='me-auto'>
-                        <NavLink
-                            to='/'
-                            className='nav-link'
-                            activeClassName='active'
-                        >
-                            Home
-                        </NavLink>
-                        <NavLink
-                            to='/graph'
-                            className='nav-link'
-                            activeClassName='active'
-                        >
-                            Values
-                        </NavLink>
-                        <NavLink
-                            to='/search'
-                            className='nav-link'
-                            activeClassName='active'
-                        >
-                            page1
-                        </NavLink>{" "}
-                        <NavLink
-                            to='/page2'
-                            className='nav-link'
-                            activeClassName='active'
-                        >
-                            page2
-                        </NavLink>{" "}
-                    </Nav>
+                {isLoggedIn && (
+                        <Nav className='me-auto'>
+                            <NavLink
+                                to='/'
+                                className='nav-link'
+                                activeClassName='active'
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                to='/graph'
+                                className='nav-link'
+                                activeClassName='active'
+                            >
+                                Values
+                            </NavLink>
+                            <NavLink
+                                to='/search'
+                                className='nav-link'
+                                activeClassName='active'
+                            >
+                                Page1
+                            </NavLink>{" "}
+                            <NavLink
+                                to='/page2'
+                                className='nav-link'
+                                activeClassName='active'
+                            >
+                                Page2
+                            </NavLink>{" "}
+                        </Nav>
+                    )}
                     <Nav className='Auth-link'>
                         {!isLoggedIn ? (
                             <>
@@ -87,6 +90,17 @@ const NavBar = () => {
                             </>
                         ) : (
                             <>
+                                <NavLink
+                                    to='/editprofile'
+                                    className='nav-link'
+                                    activeClassName='active'
+                                >
+                                    <img
+                                        src={edit}
+                                        alt='User Profile'
+                                        style={{ width: 30, height: 30 }}
+                                    />
+                                </NavLink>
                                 <NavLink
                                     to='/profile'
                                     className='nav-link'

@@ -7,7 +7,7 @@ const Register = () => {
   const navigate = useNavigate();
   // Initialize state to store form values
   const [formData, setFormData] = useState({
-    name: "",
+    userName: "",
     email: "",
     password: "",
     age: "",
@@ -59,8 +59,8 @@ const Register = () => {
           <label>Name</label>
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="userName"
+            value={formData.userName}
             onChange={handleChange}
           />
         </div>
