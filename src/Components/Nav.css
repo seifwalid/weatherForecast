@@ -98,3 +98,33 @@
   border-radius: 5px;
   padding: 5px;
 }
+
+
+.nav-link:hover .dropdown-item {
+  display: block; /* Show subpages on hover */
+  padding-left: 10px; /* Indent subpages for clarity */
+  padding-top: 10px;
+}
+.dropdown-menu {
+  position: absolute; /* Position the menu absolutely */
+  top: 6.5%; /* Position the menu below the main link */
+  list-style: none; /* Remove default list styling */
+  padding: 10px; /* Remove default padding */
+  display: none; /* Initially hide the menu */
+  background-color: rgba(221, 221, 221, 0.61);
+  backdrop-filter: blur(5px);
+  border-radius: 5%;
+}
+
+.nav-link:hover .dropdown-menu {
+  display: block; /* Show the menu on hover */
+}
+
+.dropdown-item {
+  padding: 2px;
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: rgb(11, 126, 172);
+}

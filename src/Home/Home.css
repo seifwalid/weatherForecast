@@ -62,3 +62,19 @@
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
+.app .miniContainer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 30%;
+  margin: 1rem 10px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app .groupContainer {
+  display: flex;
+  flex-direction: row;
+}

@@ -46,7 +46,7 @@ const NavBar = () => {
                                 Home
                             </NavLink>
                             <NavLink
-                                to='/graph'
+                                to='/airQuality'
                                 className='nav-link'
                                 activeClassName='active'
                             >
@@ -65,6 +65,20 @@ const NavBar = () => {
                                 activeClassName='active'
                             >
                                 Page2
+                                <ul className="dropdown-menu"> {/* Wrap subpages in a dropdown menu */}
+                                <li>
+                                    <NavLink to="/page2/subpage1" className="dropdown-item">Air Quality History</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/page2/subpage2" className="dropdown-item">Air Quality Forecast</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/page2/subpage3" className="dropdown-item">Temprature History</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/page2/subpage4" className="dropdown-item">Temprature Forecast</NavLink>
+                                </li>
+                                </ul>
                             </NavLink>{" "}
                         </Nav>
                     )}

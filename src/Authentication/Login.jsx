@@ -50,7 +50,7 @@ const Login = () => {
         <div>
           <label>Email</label>
           <input
-            type="email"
+            
             name="userName"
             value={formData.userName}
             onChange={handleChange}

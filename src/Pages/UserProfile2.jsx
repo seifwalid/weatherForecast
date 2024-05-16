@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom"; // Import Navigate
-
+import "./UserProfile2.css";
 
 const UserProfile = () => {
     
@@ -25,29 +25,33 @@ const UserProfile = () => {
       })
       .catch((error) => {
         console.error("Error fetching user data:", error);
-        // Handle error, display error message, etc.
+        
       });
   }, []);
 
-  // Define function to navigate to EditProfile
  
 
   return (
-    <div>
-      <h1>User Profile</h1>
-      {user && (
-        <div>
-          <p>Id: {user.userId}</p>
-          <p>Name: {user.userName}</p>
-          <p>Email: {user.email}</p>
-          <p>Gender: {user.gender}</p>
-          <p>Age: {user.age}</p>
-          {/* Add more input fields for other metadata */}
-        </div>
-      )}
-
+    <div className="page"><div class="profileCard profileCard--modern">
+    <h1>User Profile</h1>
+    {user && (
+       <div className="profileInfo">
+        <h3>ID:</h3>
+        <p>{user.userId}</p>
+        <h3>Name:</h3>
+        <p>{user.userName}</p>
+        <h3>Email:</h3>
+        <p>{user.email}</p>
+        <h3>Gender:</h3>
+        <p>{user.gender}</p>
+        <h3>Age:</h3>
+        <p>{user.age}</p>
+        
+        {/* Add more input fields for other metadata */}
+      </div>
+    )}
+  </div></div>
     
-    </div>
   );
 };
 
